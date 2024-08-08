@@ -24,16 +24,19 @@ function agregarTarea(tarea,id,hecho,eliminar) {
     };
     const realizado = hecho ? check : uncheck;
     const LINE = hecho ? tachado : '';
-    const elemento = `<li id=elemento>
+    const elemento = `<li class="li" id=elemento>
                 <span id="${id}" data="hecho"  class="material-symbols-outlined">${realizado}</span>
                <p class="tareas-lista text ${LINE}">${tarea}</p>
-                <span id="${id}" data="eliminar" class="material-symbols-outlined">close_small</span></li>`
+                <span id="${id}" data="eliminar" class="material-symbols-outlined">close</span></li>`
             lista.insertAdjacentHTML ("beforeend",elemento);
 };
 
 function tareaRealizada(element) {
-    element.classList.toggle(check);
-    element.classList.toggle(uncheck);
+        if (element.innerText === "radio_button_unchecked") {
+        element.innerText = "task_alt";
+    } else {
+        element.innerText ="radio_button_unchecked"
+    }
 
     element.parentNode.querySelector('.text').classList.toggle(tachado);
     LIST[element.id].realizado = LIST[element.id].realizado ?false :true;

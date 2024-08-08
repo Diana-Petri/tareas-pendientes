@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -18,11 +19,12 @@ body{
    text-shadow: -0.1px 0 #7469B6, 0 0.1px #7469B6, 0.1px 0 #7469B6, 0 -.01px #7469B6;
    justify-content: center;
    text-align: center;
+   scroll-behavior: smooth;
 }
 .contenedor{
-   width: 400px;
+   width: 450px;
    max-width: 80%;
-   height: 600px;
+   height: 85vh;
    margin: 0 auto;
    box-shadow: 2px 2px 20px;
    padding-left: 25px;
@@ -33,6 +35,20 @@ body{
    border-radius: 25px;
    margin-top: 20px;
 }
+
+.cajita {
+  scroll-padding: 5px;
+  overflow: auto;
+  height: 38vh;
+  border-radius: 5%;
+  box-shadow: 0px 0px 2px;
+  padding: 7px;
+  background-color: #e3e2ea61;
+  scrollbar-width: none;
+}
+
+
+
 
 .marcellus-regular {
     font-family: "Marcellus", serif;
@@ -99,7 +115,7 @@ margin: 20px;
 .tareas p{
   margin: 0;
   text-wrap: wrap;
-  text-align: start;
+  
   align-items: start;
 } 
 
@@ -111,3 +127,10 @@ margin: 20px;
   text-decoration: line-through;
   color: #7569b661;
 }
+
+.li span:hover{
+  transform: scale(1.2); 
+  cursor: pointer;
+
+}
+
